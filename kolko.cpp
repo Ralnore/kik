@@ -21,7 +21,9 @@ void rysujPlansze()
   cout<<endl;
   }
 }
-
+  void ruchGracza(){
+    
+  }
 int main(){
   wypelnijTablice();
   rysujPlansze();
