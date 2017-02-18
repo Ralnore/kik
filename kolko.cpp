@@ -1,16 +1,29 @@
 #include <iostream>
 using namespace std;
-
-void rysujPlansze(char plansza[][]){
-  for(int i=1;i<=3;i++){
-    for(int j=1;j<=3;j++){
-      cout<<" "<<plansza[i][j]<<" ";
+int plansza[2][2];
+void wypelnijTablice(){
+  int temp=1;
+  for(int i=0;i<3;i++)
+    for(int j=0;j<3;j++){
+      plansza[i][j]=temp;
+      temp=temp+1;
     }
-  }
+}
 
+void rysujPlansze()
+{
+  for(int i=0;i<3;i++)
+  {
+    for(int j=0;j<3;j++)
+    {
+      cout<<"|__"<<plansza[i][j]<<"__|";
+    }
+  cout<<endl;
+  }
 }
 
 int main(){
-  rysujPlansze(plansza);
+  wypelnijTablice();
+  rysujPlansze();
   return 0;
 }
